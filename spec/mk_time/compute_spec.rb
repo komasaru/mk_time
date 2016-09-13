@@ -72,67 +72,67 @@ describe MkTime::Compute do
       it { expect(subject).to be_within(0.001).of(10583.600) }
     end
 
-    context ".  calc_dt_before_1600(y)" do
+    context ".calc_dt_before_1600(y)" do
       subject { c.calc_dt_before_1600(1599 + (12 - 0.5) / 12) }
       it { expect(subject).to be_within(0.001).of(120.270) }
     end
 
-    context ".  calc_dt_before_1700(y)" do
+    context ".calc_dt_before_1700(y)" do
       subject { c.calc_dt_before_1700(1699 + (12 - 0.5) / 12) }
       it { expect(subject).to be_within(0.001).of(8.985) }
     end
 
-    context ".  calc_dt_before_1800(y)" do
+    context ".calc_dt_before_1800(y)" do
       subject { c.calc_dt_before_1800(1799 + (12 - 0.5) / 12) }
       it { expect(subject).to be_within(0.001).of(13.774) }
     end
 
-    context ".  calc_dt_before_1860(y)" do
+    context ".calc_dt_before_1860(y)" do
       subject { c.calc_dt_before_1860(1859 + (12 - 0.5) / 12) }
       it { expect(subject).to be_within(0.001).of(7.554) }
     end
 
-    context ".  calc_dt_before_1900(y)" do
+    context ".calc_dt_before_1900(y)" do
       subject { c.calc_dt_before_1900(1899 + (12 - 0.5) / 12) }
       it { expect(subject).to be_within(0.001).of(-2.763) }
     end
 
-    context ".  calc_dt_before_1920(y)" do
+    context ".calc_dt_before_1920(y)" do
       subject { c.calc_dt_before_1920(1919 + (12 - 0.5) / 12) }
       it { expect(subject).to be_within(0.001).of(21.178) }
     end
 
-    context ".  calc_dt_before_1941(y)" do
+    context ".calc_dt_before_1941(y)" do
       subject { c.calc_dt_before_1941(1940 + (12 - 0.5) / 12) }
       it { expect(subject).to be_within(0.001).of(24.755) }
     end
 
-    context ".  calc_dt_before_1961(y)" do
+    context ".calc_dt_before_1961(y)" do
       subject { c.calc_dt_before_1961(1960 + (12 - 0.5) / 12) }
       it { expect(subject).to be_within(0.001).of(33.531) }
     end
 
-    context ".  calc_dt_before_1986(y)" do
+    context ".calc_dt_before_1986(y)" do
       subject { c.calc_dt_before_1986(1985 + (12 - 0.5) / 12) }
       it { expect(subject).to be_within(0.001).of(54.848) }
     end
 
-    context ".  calc_dt_before_2005(y)" do
+    context ".calc_dt_before_2005(y)" do
       subject { c.calc_dt_before_2005(2004 + (12 - 0.5) / 12) }
       it { expect(subject).to be_within(0.001).of(64.710) }
     end
 
-    context ".  calc_dt_before_2050(y)" do
+    context ".calc_dt_before_2050(y)" do
       subject { c.calc_dt_before_2050(2049 + (12 - 0.5) / 12) }
       it { expect(subject).to be_within(0.001).of(92.964) }
     end
 
-    context ".  calc_dt_until_2150(y)" do
+    context ".calc_dt_until_2150(y)" do
       subject { c.calc_dt_until_2150(2149 + (12 - 0.5) / 12) }
       it { expect(subject).to be_within(0.001).of(328.392) }
     end
 
-    context ".  calc_dt_after_2150(y)" do
+    context ".calc_dt_after_2150(y)" do
       subject { c.calc_dt_after_2150(3000 + (12 - 0.5) / 12) }
       it { expect(subject).to be_within(0.001).of(4442.920) }
     end

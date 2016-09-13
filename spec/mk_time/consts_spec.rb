@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe MkTime::Const do
   context "MSG_ERR_1" do
-    it { expect(MkTime::Const::MSG_ERR_1).to eq "[ERROR] Format: YYYYMMDD or YYYYMMDDHHMMSS" }
+    it { expect(MkTime::Const::MSG_ERR_1).to eq "[ERROR] Format: YYYYMMDD or YYYYMMDDHHMMSS or YYYYMMDDHHMMSSU..." }
   end
 
   context "MSG_ERR_2" do
