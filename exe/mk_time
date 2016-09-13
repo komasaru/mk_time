@@ -3,18 +3,18 @@
 require "mk_time"
 
 t = MkTime.new(ARGV[0])
-puts "     UTC: #{t.utc.instance_eval { '%s.%03d' % [strftime('%Y-%m-%d %H:%M:%S'), (usec / 1000.0).round] }}"
-puts "     JST: #{t.jst.instance_eval { '%s.%03d' % [strftime('%Y-%m-%d %H:%M:%S'), (usec / 1000.0).round] }}"
+puts "     UTC: #{t.utc.strftime('%Y-%m-%d %H:%M:%S.%3N')}"
+puts "     JST: #{t.jst.strftime('%Y-%m-%d %H:%M:%S.%3N')}"
 puts "      JD: #{t.jd} day"
 puts "       T: #{t.t} century"
 puts " UTC-TAI: #{t.utc_tai} sec"
 puts "LEAP_SEC: #{t.leap_sec} sec"  # = utc_tai
 puts "    DUT1: #{t.dut1} sec"
 puts "  deltaT: #{t.dt} sec"
-puts "     TAI: #{t.tai.instance_eval { '%s.%03d' % [strftime('%Y-%m-%d %H:%M:%S'), (usec / 1000.0).round] }}"
-puts "     UT1: #{t.ut1.instance_eval { '%s.%03d' % [strftime('%Y-%m-%d %H:%M:%S'), (usec / 1000.0).round] }}"
-puts "      TT: #{t.tt .instance_eval { '%s.%03d' % [strftime('%Y-%m-%d %H:%M:%S'), (usec / 1000.0).round] }}"
-puts "     TCG: #{t.tcg.instance_eval { '%s.%03d' % [strftime('%Y-%m-%d %H:%M:%S'), (usec / 1000.0).round] }}"
-puts "     TCB: #{t.tcb.instance_eval { '%s.%03d' % [strftime('%Y-%m-%d %H:%M:%S'), (usec / 1000.0).round] }}"
-puts "     TDB: #{t.tdb.instance_eval { '%s.%03d' % [strftime('%Y-%m-%d %H:%M:%S'), (usec / 1000.0).round] }}"
+puts "     TAI: #{t.tai.strftime('%Y-%m-%d %H:%M:%S.%3N')}"
+puts "     UT1: #{t.ut1.strftime('%Y-%m-%d %H:%M:%S.%3N')}"
+puts "      TT: #{t.tt .strftime('%Y-%m-%d %H:%M:%S.%3N')}"
+puts "     TCG: #{t.tcg.strftime('%Y-%m-%d %H:%M:%S.%3N')}"
+puts "     TCB: #{t.tcb.strftime('%Y-%m-%d %H:%M:%S.%3N')}"
+puts "     TDB: #{t.tdb.strftime('%Y-%m-%d %H:%M:%S.%3N')}"
 
