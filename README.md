@@ -26,15 +26,16 @@ Or install it yourself as:
 
     t = MkTime.new("20160726")
     t = MkTime.new("20160726123456")
-    e = MkTime.new
+    t = MkTime.new("20160726123456123")
+    t = MkTime.new
 
-* You can set TDB formatted "YYYYMMDD" or "YYYYMMDDHHMMSS" as an argument.
+* You can set TDB formatted "YYYYMMDD" or "YYYYMMDDHHMMSS" or "YYYYMMDDHHMMSSU..." as an argument. (`U`: milliseconds)
 * If you don't set an argument, this class considers the system time to have been set as an argument.
 
 ### Conversion
 
-    puts "     UTC: #{t.utc}"
-    puts "     JST: #{t.jst}"
+    puts "     UTC: #{t.utc.instance_eval { '%s.%03d' % [strftime('%Y-%m-%d %H:%M:%S'), (usec / 1000.0).round] }}"
+    puts "     JST: #{t.jst.instance_eval { '%s.%03d' % [strftime('%Y-%m-%d %H:%M:%S'), (usec / 1000.0).round] }}"
     puts "      JD: #{t.jd} day"
     puts "       T: #{t.t} century"
     puts " UTC-TAI: #{t.utc_tai} sec"

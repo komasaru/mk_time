@@ -12,9 +12,10 @@ module MkTime
     #=========================================================================
     def utc2jst(utc)
       jst = utc + Const::JST_OFFSET * 60 * 60
+      d = jst.usec.to_s.split(//).size
       return Time.new(
         jst.year, jst.month, jst.day,
-        jst.hour, jst.min, jst.sec,
+        jst.hour, jst.min, jst.sec + Rational(jst.usec, 10 ** d),
         sprintf("+%02d:00", Const::JST_OFFSET)
       )
     rescue => e

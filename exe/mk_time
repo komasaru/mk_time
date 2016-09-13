@@ -3,12 +3,12 @@
 require "mk_time"
 
 t = MkTime.new(ARGV[0])
-puts "     UTC: #{t.utc}"
-puts "     JST: #{t.jst}"
+puts "     UTC: #{t.utc.instance_eval { '%s.%03d' % [strftime('%Y-%m-%d %H:%M:%S'), (usec / 1000.0).round] }}"
+puts "     JST: #{t.jst.instance_eval { '%s.%03d' % [strftime('%Y-%m-%d %H:%M:%S'), (usec / 1000.0).round] }}"
 puts "      JD: #{t.jd} day"
 puts "       T: #{t.t} century"
 puts " UTC-TAI: #{t.utc_tai} sec"
-puts "LEAP_SEC: #{t.leap_sec} sec"  # = tuc_tai
+puts "LEAP_SEC: #{t.leap_sec} sec"  # = utc_tai
 puts "    DUT1: #{t.dut1} sec"
 puts "  deltaT: #{t.dt} sec"
 puts "     TAI: #{t.tai.instance_eval { '%s.%03d' % [strftime('%Y-%m-%d %H:%M:%S'), (usec / 1000.0).round] }}"

@@ -1,6 +1,6 @@
 module MkTime
   module Const
-    MSG_ERR_1  = "[ERROR] Format: YYYYMMDD or YYYYMMDDHHMMSS"
+    MSG_ERR_1  = "[ERROR] Format: YYYYMMDD or YYYYMMDDHHMMSS or YYYYMMDDHHMMSSU..."
     MSG_ERR_2  = "[ERROR] Invalid date-time!"
     JST_OFFSET = 9                # JST offset from UTC
     J2000      = 2451545          # Julian Day of 2000-01-01 12:00:00
