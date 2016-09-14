@@ -29,7 +29,7 @@ Or install it yourself as:
     t = MkTime.new("20160726123456123")
     t = MkTime.new
 
-* You can set TDB formatted "YYYYMMDD" or "YYYYMMDDHHMMSS" or "YYYYMMDDHHMMSSU..." as an argument. (`U`: milliseconds)
+* You can set TDB formatted "YYYYMMDD" or "YYYYMMDDHHMMSS" or "YYYYMMDDHHMMSSU..." as an argument. (`U`: microseconds)
 * If you don't set an argument, this class considers the system time to have been set as an argument.
 
 ### Conversion
