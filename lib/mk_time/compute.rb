@@ -40,7 +40,7 @@ module MkTime
     #=========================================================================
     def gc2jd(t)
       year, month, day = t.year, t.month, t.day
-      hour, min, sec   = t.hour, t.min, t.sec
+      hour, min, sec   = t.hour, t.min, t.sec + (t.usec * 10 ** (-6)).to_f
 
       begin
         # 1月,2月は前年の13月,14月とする
