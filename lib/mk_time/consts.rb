@@ -180,7 +180,8 @@ module MkTime
                    ["20170330",  0.4],
                    ["20170629",  0.3],
                    ["20171130",  0.2],
-                   ["20180228",  0.0]  # (<= Provisional end-point)
+                   ["20180315",  0.1],
+                   ["20180615",  0.0]  # (<= Provisional end-point)
                  ].freeze  # DUT1 adjustment
   end
 end
