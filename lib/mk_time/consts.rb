@@ -39,7 +39,7 @@ module MkTime
                    ["20120701", -35],
                    ["20150701", -36],
                    ["20170101", -37],
-                   ["20190101",   0]  # (<= Provisional end-point)
+                   ["20220101",   0]  # (<= Provisional end-point)
                  ].freeze  # Leap Second's adjustment
     DUT1S      = [
                    ["19880317",  0.2],
@@ -184,7 +184,7 @@ module MkTime
                    ["20180921",  0.0],
                    ["20190117", -0.1],
                    ["20190502", -0.2],
-                   ["20190802",  0.0]  # (<= Provisional end-point)
+                   ["20210502",  0.0]  # (<= Provisional end-point)
                  ].freeze  # DUT1 adjustment
   end
 end
